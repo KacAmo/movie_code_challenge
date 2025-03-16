@@ -4,15 +4,16 @@
 - [docker and docker-compose](https://medium.com/@piyushkashyap045/comprehensive-guide-installing-docker-and-docker-compose-on-windows-linux-and-macos-a022cf82ac0b)
 # Setup
 
-# For development
-- Run ``` nvm use``` to install the appropriate node and npm versions
-- Follow the instructions to install the necessary npm and node version if needed
+## For development
 - Install all the dependencies
 ```shell
-for folder in backend/etl backend/api frontend; do npm ci --prefix "$folder"; done
+for folder in backend/etl backend/api frontend; do cd "$folder"; nvm use; npm ci ; cd ..; done
 ```
-- Run the tests ```for folder in backend/etl backend/api frontend; do npm t --prefix "$folder"; done```
-# For demonstration purposes
+- Run the tests 
+```shell
+for folder in backend/etl backend/api frontend; do npm t --prefix "$folder"; done
+```
+## For demonstration purposes
 start everything locally using docker-compose
 ```sh
 docker-compose up
