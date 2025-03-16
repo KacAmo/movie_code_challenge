@@ -1,0 +1,32 @@
+{
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "compilerOptions": {
+      "target": "ESNext",
+      "useDefineForClassFields": true,
+      "module": "ESNext",
+      "resolveJsonModule": true,
+          "allowJs": true,
+  
+      /**
+       * Typecheck JS in `.svelte` files by default
+       * You can remove this if you don't want typechecking in Svelte files.
+       */
+      "checkJs": true,
+      "isolatedModules": true,
+          "esModuleInterop": true,
+          "lib": ["ESNext", "DOM"],
+          "moduleResolution": "Node",
+          "strict": true,
+          "noEmit": true,
+          "noUnusedLocals": true,
+          "noUnusedParameters": true,
+          "noImplicitReturns": true,
+          "skipLibCheck": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      }
+    },
+    "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "src/App.spec.ts", "src/components/MovieCard.spec.ts", "src/components/MovieCard.spec.ts"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+  }
