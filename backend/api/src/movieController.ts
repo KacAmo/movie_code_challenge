@@ -3,7 +3,6 @@ import { MovieService } from './movieService';
 
 export class MovieController {
     constructor(private readonly movieService: MovieService = new MovieService()) {
-        // Default parameter allows for either DI or automatic instantiation
     }
     async searchMovies(req: Request, res: Response) {
         try {

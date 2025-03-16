@@ -1,4 +1,3 @@
-// backend/api/jest.config.ts
 import type { Config } from 'jest';
 
 const config: Config = {

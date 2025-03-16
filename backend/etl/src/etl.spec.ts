@@ -2,7 +2,6 @@ import { ETLService } from './etlService';
 import { MovieRepository } from './movieRepository';
 import { OmdbService } from './omdbService';
 
-// Mock dependencies
 jest.mock('./omdbService');
 jest.mock('./movieRepository');
 jest.mock('dotenv', () => ({

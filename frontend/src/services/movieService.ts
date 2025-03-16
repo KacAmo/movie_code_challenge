@@ -1,4 +1,3 @@
-// frontend/src/services/movieService.ts
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
 
 export async function searchMovies(query?: string): Promise<any[]> {
